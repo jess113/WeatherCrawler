@@ -31,10 +31,9 @@ class App extends React.Component {
             Search
           </button>
         </form>
-        <main>
-          {memes.map(m=>{
-            return <img alt="meme" key={m.id}
-            src={m.images.fixed_height.url}/>
+        <main className="Results">
+          {memes.map(meme=>{
+            return <Memes key={meme.id} meme={meme}/>
           })}
         </main>
       </div>
@@ -42,4 +41,11 @@ class App extends React.Component {
   }
 }
 
+function Memes(props) {
+  const {meme}=props
+  const url=meme.images.fixed_height.url
+  return (<div className="meme-wrap" onClick={()=>window.open(url, '_blank')}>
+    <img height ="200" alt="meme" src={url}/>
+  </div>)
+}
 export default App;
