@@ -1,5 +1,7 @@
 import React from 'react';
 import './App.css';
+import Button from '@material-ui/core/Button';
+import LinearProgress from '@material-ui/core/LinearProgress';
 
 class App extends React.Component {
 
@@ -24,13 +26,15 @@ class App extends React.Component {
     return (
       <div className="App">
         <form className="App-header" onSubmit={this.getMemes}>
-          <input value={text}
+          <input value={text} 
+            placeholder="Search your memes here..."
             onChange={e=> this.setState({text: e.target.value})}
           />
-          <button disabled={loading || !text} type="submit">
+          <Button variant="contained" color="primary" >
             Search
-          </button>
+          </Button>
         </form>
+        {loading && <LinearProgress />}
         <main className="Results">
           {memes.map(meme=>{
             return <Memes key={meme.id} meme={meme}/>

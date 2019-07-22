@@ -1,7 +1,6 @@
 .App {
   background-color: #282c34;
-  height: 100vh;
-  overflow: hidden;
+  min-height: 100vh;
   text-align: center;
 }
 
@@ -15,7 +14,7 @@
   width: 100%;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(8px + 2vmin);
   color: black;
   outline: none;
 }
