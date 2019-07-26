@@ -1,3 +1,5 @@
+@import '~antd/dist/antd.css';
+
 .App {
   background-color: whitesmoke;
   min-height: 100vh;
@@ -8,20 +10,14 @@
   display: flex;
   flex-direction: row;
 }
-.App-header TextField {
-  background-color: whitesmoke;
-  min-height: 40px;
-  width: 100%;
-  align-items: center;
+
+.App-header Loading {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  font-size: calc(8px + 2vmin);
-  color: black;
-  outline: none;
-}
-.App-header Button {
-  min-height:56px ;
-  width: 80px;
-  cursor: pointer;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
 }
 
 .results {
@@ -36,20 +32,3 @@
   height: 0;
 }
 
-.meme-wrap {
-  display: inline-block;
-  position:relative;
-  cursor: pointer;
-  margin: 3px;
-}
-.meme-wrap:hover:after {
-  content:"🔗";
-  position: absolute;
-  top: 0; left: 0; bottom: 0; right: 0;
-  color: rgb(187, 255, 255);
-  background: rgba(0,0,0,0.5);
-  font-size: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
